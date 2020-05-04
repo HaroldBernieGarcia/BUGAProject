@@ -1,0 +1,16 @@
+@startuml
+
+
+CPU -(CHOoses Number from 1-200)
+(CHOoses Number from 1-200) -- (PLayer Answer geuss number)
+(PLayer Answer geuss number)--(n=0)
+(PLayer Answer geuss number) - player
+
+(n=0) -- (to high or to Low)
+CPU   -> (to high or to Low)
+(to high or to Low)--(if NUMBER IS)
+(if NUMBER IS) ---- (if True WINS *\\\/\//*)
+(if NUMBER IS) -- (WRONG : return to guessing)
+(WRONG : return to guessing) -> (PLayer Answer geuss number)
+
+@enduml
